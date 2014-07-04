@@ -13,7 +13,7 @@ import static org.junit.Assert.assertTrue;
  *         http://www.antoniogoncalves.org
  *         --
  */
-public class BookServiceIT {
+public class BookServiceITest {
 
   // ======================================
   // =              Methods               =
@@ -26,11 +26,10 @@ public class BookServiceIT {
     WeldContainer container = weld.initialize();
 
     BookService bookService = container.instance().select(BookService.class).get();
-
     Book book = bookService.createBook("H2G2", 12.5f, "Geeky scifi Book");
-
     assertTrue(book.getNumber().startsWith("MOCK"));
 
     weld.shutdown();
   }
+  
 }

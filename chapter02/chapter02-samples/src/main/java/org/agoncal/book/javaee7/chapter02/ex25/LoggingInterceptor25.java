@@ -44,7 +44,8 @@ public class LoggingInterceptor25 {
     logger.severe(">>>" + ic.getTarget().toString() + " - " + ic.getMethod().getName());
     try {
       return ic.proceed();
-    } finally {
+    } 
+    finally {
       logger.severe("<<<" + ic.getTarget().toString() + " - " + ic.getMethod().getName());
       logger.exiting(ic.getTarget().toString(), ic.getMethod().getName());
     }

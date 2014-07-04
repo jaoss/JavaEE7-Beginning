@@ -6,7 +6,9 @@
   <alternatives>
     <class>org.agoncal.book.javaee7.chapter02.MockGenerator</class>
   </alternatives>
+  
   <interceptors>
     <class>org.agoncal.book.javaee7.chapter02.LoggingInterceptor</class>
   </interceptors>
+  
 </beans>

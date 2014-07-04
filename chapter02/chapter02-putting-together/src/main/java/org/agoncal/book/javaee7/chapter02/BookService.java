@@ -29,4 +29,5 @@ public class BookService {
     book.setNumber(numberGenerator.generateNumber());
     return book;
   }
+  
 }

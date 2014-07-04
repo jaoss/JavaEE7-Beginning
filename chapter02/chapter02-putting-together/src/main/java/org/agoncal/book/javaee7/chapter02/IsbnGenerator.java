@@ -31,4 +31,5 @@ public class IsbnGenerator implements NumberGenerator {
     logger.info("Generated ISBN : " + isbn);
     return isbn;
   }
+  
 }

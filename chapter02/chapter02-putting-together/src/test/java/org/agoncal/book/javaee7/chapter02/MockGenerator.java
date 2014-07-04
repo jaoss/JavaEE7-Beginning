@@ -17,21 +17,20 @@ import java.util.logging.Logger;
 @ThirteenDigits
 public class MockGenerator implements NumberGenerator {
 
-    // ======================================
-    // =             Attributes             =
-    // ======================================
-
+  // ======================================
+  // =             Attributes             =
+  // ======================================
   @Inject
   private Logger logger;
 
-    // ======================================
-    // =          Business methods          =
-    // ======================================
-
-    @Loggable
-    public String generateNumber() {
+  // ======================================
+  // =          Business methods          =
+  // ======================================
+  @Loggable
+  public String generateNumber() {
     String mock = "MOCK-" + Math.abs(new Random().nextInt());
     logger.info("Generated Mock : " + mock);
     return mock;
-    }
+  }
+  
 }

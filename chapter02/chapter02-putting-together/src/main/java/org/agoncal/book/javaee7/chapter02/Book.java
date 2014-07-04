@@ -14,7 +14,7 @@ public class Book {
   // ======================================
 
   private String title;
-  private Float price;
+  private Float  price;
   private String description;
   private String number;
 
