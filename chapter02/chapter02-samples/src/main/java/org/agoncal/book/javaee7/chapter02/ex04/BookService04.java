@@ -27,4 +27,5 @@ public class BookService04 {
     book.setIsbn(numberGenerator.generateNumber());
     return book;
   }
+  
 }

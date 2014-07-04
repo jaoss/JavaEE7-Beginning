@@ -16,10 +16,10 @@ public class Book01 {
   // ======================================
 
   private String title;
-  private Float price;
+  private Float  price;
   private String description;
   private String isbn;
-  private Date instanciationDate;
+  private Date   instanciationDate;
 
   // ======================================
   // =            Constructors            =

@@ -15,4 +15,5 @@ public interface NumberGenerator02 {
   // ======================================
 
   String generateNumber();
+  
 }

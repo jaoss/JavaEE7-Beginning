@@ -23,6 +23,7 @@ public class BookService01 {
 
   @Inject
   private NumberGenerator01 numberGenerator;
+  
   @Inject
   private EntityManager em;
 

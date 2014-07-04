@@ -19,8 +19,9 @@ public class BookService02 {
   // =            Constructors            =
   // ======================================
 
-  public BookService02() {
-    this.numberGenerator = new IsbnGenerator02();
+  public BookService02() {   
+    this.numberGenerator = new IsbnGenerator02(); 
+    System.out.println("Number generator created : " + this.numberGenerator);
   }
 
   // ======================================
@@ -28,8 +29,9 @@ public class BookService02 {
   // ======================================
 
   public Book02 createBook(String title, Float price, String description) {
-    Book02 book = new Book02(title, price, description);
+    Book02 book = new Book02(title, price, description);    
     book.setIsbn(numberGenerator.generateNumber());
+    System.out.println("Book created : " + book);
     return book;
   }
 }

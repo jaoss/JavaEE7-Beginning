@@ -23,11 +23,9 @@ public class NumberGenerator02Test {
 
   @Test
   public void shouldCheckNumberIsThirteenDigits() {
-
     BookService02 bookService = new BookService02();
-
     Book02 book = bookService.createBook("H2G2", 12.5f, "Geeky scifi Book");
-
     assertTrue(book.getIsbn().startsWith("13"));
   }
+  
 }

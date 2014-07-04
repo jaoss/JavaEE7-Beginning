@@ -14,7 +14,7 @@ public class Book02 {
   // ======================================
 
   private String title;
-  private Float price;
+  private Float  price;
   private String description;
   private String isbn;
 
@@ -74,12 +74,13 @@ public class Book02 {
   @Override
   public String toString() {
     final StringBuilder sb = new StringBuilder();
-    sb.append("Book02");
-    sb.append(", title='").append(title).append('\'');
+    sb.append("Book02{");
+    sb.append("title='").append(title).append('\'');
     sb.append(", price=").append(price);
     sb.append(", description='").append(description).append('\'');
     sb.append(", isbn='").append(isbn).append('\'');
     sb.append('}');
     return sb.toString();
   }
+  
 }

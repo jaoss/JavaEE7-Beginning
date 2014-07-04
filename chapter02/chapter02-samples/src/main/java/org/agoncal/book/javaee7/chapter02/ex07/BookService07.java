@@ -9,7 +9,7 @@ import javax.inject.Inject;
  *         http://www.antoniogoncalves.org
  *         --
  */
-public class BookService07 {
+public class BookService07 implements BookService {
 
   // ======================================
   // =             Attributes             =
@@ -23,9 +23,11 @@ public class BookService07 {
   // =          Business methods          =
   // ======================================
 
+  @Override
   public Book07 createBook(String title, Float price, String description) {
     Book07 book = new Book07(title, price, description);
     book.setIsbn(numberGenerator.generateNumber());
     return book;
   }
+  
 }

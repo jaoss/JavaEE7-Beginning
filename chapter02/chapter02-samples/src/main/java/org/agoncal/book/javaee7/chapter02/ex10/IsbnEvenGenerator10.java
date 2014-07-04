@@ -20,4 +20,5 @@ public class IsbnEvenGenerator10 implements NumberGenerator10 {
   public String generateNumber() {
     return "132-84356-" + Math.abs(new Random().nextInt());
   }
+  
 }

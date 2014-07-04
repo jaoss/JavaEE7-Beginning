@@ -18,4 +18,10 @@ public class IssnGenerator03 implements NumberGenerator03 {
   public String generateNumber() {
     return "8-" + Math.abs(new Random().nextInt());
   }
+  
+  @Override
+  public String toString() {
+    return "IssnGenerator02{" + '}';
+  }
+  
 }

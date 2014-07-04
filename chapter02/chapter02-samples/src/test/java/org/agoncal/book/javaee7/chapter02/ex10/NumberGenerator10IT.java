@@ -63,4 +63,5 @@ public class NumberGenerator10IT {
     Book10 book = bookService.createBook("H2G2", 12.5f, "Geeky scifi Book");
     assertTrue(book.getIsbn().startsWith("8"));
   }
+  
 }
