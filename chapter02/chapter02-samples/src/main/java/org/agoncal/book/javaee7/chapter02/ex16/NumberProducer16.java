@@ -29,4 +29,5 @@ public class NumberProducer16 {
   public double random() {
     return Math.abs(new Random().nextInt());
   }
+  
 }

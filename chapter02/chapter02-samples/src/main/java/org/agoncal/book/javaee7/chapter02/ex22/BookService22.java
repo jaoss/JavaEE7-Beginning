@@ -34,4 +34,5 @@ public class BookService22 {
     book.setIsbn(numberGenerator.generateNumber());
     return "customer.xhtml";
   }
+  
 }

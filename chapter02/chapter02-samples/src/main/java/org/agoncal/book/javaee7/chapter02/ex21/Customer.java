@@ -15,12 +15,12 @@ public class Customer {
   // =             Attributes             =
   // ======================================
 
-  private String firstName;
-  private String lastName;
-  private String email;
-  private String phoneNumber;
-  private Date dateOfBirth;
-  private Login login;
+  private String  firstName;
+  private String  lastName;
+  private String  email;
+  private String  phoneNumber;
+  private Date    dateOfBirth;
+  private Login   login;
   private Account account;
 
   // ======================================
@@ -32,8 +32,8 @@ public class Customer {
 
   public Customer(String firstName, String lastName, String email) {
     this.firstName = firstName;
-    this.lastName = lastName;
-    this.email = email;
+    this.lastName  = lastName;
+    this.email     = email;
   }
 
   // ======================================

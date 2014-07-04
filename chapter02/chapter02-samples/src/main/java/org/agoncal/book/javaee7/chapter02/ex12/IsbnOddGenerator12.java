@@ -18,7 +18,9 @@ public class IsbnOddGenerator12 implements NumberGenerator12 {
   // =          Business methods          =
   // ======================================
 
+  @Override
   public String generateNumber() {
     return "131-84356-" + Math.abs(new Random().nextInt());
   }
+  
 }

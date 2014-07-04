@@ -1,5 +1,6 @@
 package org.agoncal.book.javaee7.chapter02.ex23;
 
+import java.util.logging.Level;
 import javax.inject.Inject;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.InvocationContext;
@@ -23,6 +24,7 @@ public class CustomerService23 {
 
   @Inject
   private EntityManager em;
+  
   @Inject
   private Logger logger;
 
@@ -41,12 +43,13 @@ public class CustomerService23 {
   @AroundInvoke
   private Object logMethod(InvocationContext ic) throws Exception {
     logger.entering(ic.getTarget().toString(), ic.getMethod().getName());
-    logger.severe(">>>" + ic.getTarget().toString() + " - " + ic.getMethod().getName());
+    logger.log(Level.SEVERE, ">>>{0} - {1}", new Object[]{ic.getTarget().toString(), ic.getMethod().getName()});
     try {
       return ic.proceed();
-    } finally {
+    } 
+    finally {
       logger.exiting(ic.getTarget().toString(), ic.getMethod().getName());
-      logger.severe("<<<" + ic.getTarget().toString() + " - " + ic.getMethod().getName());
+      logger.log(Level.SEVERE, "<<<{0} - {1}", new Object[]{ic.getTarget().toString(), ic.getMethod().getName()});
     }
   }
 }

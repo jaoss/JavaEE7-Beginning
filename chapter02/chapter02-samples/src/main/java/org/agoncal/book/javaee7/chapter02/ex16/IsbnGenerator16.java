@@ -41,4 +41,5 @@ public class IsbnGenerator16 implements NumberGenerator16 {
     log.warning("Debug message with @Inject");
     return prefix + editorNumber + postfix;
   }
+  
 }

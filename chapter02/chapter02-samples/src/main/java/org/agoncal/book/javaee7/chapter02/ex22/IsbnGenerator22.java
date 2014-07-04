@@ -20,4 +20,5 @@ public class IsbnGenerator22 implements NumberGenerator22 {
   public String generateNumber() {
     return "13-84356-" + Math.abs(new Random().nextInt());
   }
+  
 }

@@ -15,7 +15,7 @@ import java.io.Serializable;
 @ConversationScoped
 public class CustomerCreatorWizard21 implements Serializable {
 
-  private Login login;
+  private Login   login;
   private Account account;
 
   @Inject
@@ -44,4 +44,5 @@ public class CustomerCreatorWizard21 implements Serializable {
 
     conversation.end();
   }
+  
 }

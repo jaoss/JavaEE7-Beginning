@@ -59,4 +59,5 @@ public class DerbyPingService19IT {
     DerbyPingService19 pingService = container.instance().select(DerbyPingService19.class).get();
     pingService.ping();
   }
+  
 }
