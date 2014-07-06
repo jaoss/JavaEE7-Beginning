@@ -21,10 +21,13 @@ public class CreditCard99 {
 
   @XmlAttribute
   private String number;
+  
   @XmlElement(name = "expiry_date")
   private String expiryDate;
+  
   @XmlElement(name = "control_number")
   private Integer controlNumber;
+  
   private String type;
 
   // ======================================
@@ -76,4 +79,5 @@ public class CreditCard99 {
   public void setType(String type) {
     this.type = type;
   }
+  
 }

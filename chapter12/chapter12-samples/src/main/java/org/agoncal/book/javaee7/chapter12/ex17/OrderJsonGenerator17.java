@@ -15,6 +15,7 @@ import java.io.StringWriter;
  *         --
  */
 public class OrderJsonGenerator17 {
+  
   public static void main(String[] args) throws IOException {
 //    System.out.println(new OrderJsonGenerator17().generateCreditCard());
     System.out.println(new OrderJsonGenerator17().generatePurchaseOrder());

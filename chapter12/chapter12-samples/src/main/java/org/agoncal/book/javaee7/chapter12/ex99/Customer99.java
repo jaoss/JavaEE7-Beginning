@@ -20,9 +20,12 @@ public class Customer99 {
 
   @XmlAttribute(name = "first_name")
   private String firstName;
+  
   @XmlAttribute(name = "last_name")
   private String lastName;
+  
   private String email;
+  
   private String phoneNumber;
 
 // ======================================

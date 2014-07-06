@@ -46,11 +46,9 @@ public class CreditCardXMLTest {
     Marshaller m = context.createMarshaller();
     m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
     m.marshal(creditCard, writer);
-
+    
     System.out.println(writer);
-
     assertEquals(creditCardXML, writer.toString().trim());
-
   }
 
   @Test
@@ -60,9 +58,10 @@ public class CreditCardXMLTest {
     Unmarshaller u = context.createUnmarshaller();
     CreditCard creditCard = (CreditCard) u.unmarshal(reader);
 
-    assertEquals("12345678", creditCard.getNumber());
-    assertEquals("10/14", creditCard.getExpiryDate());
+    assertEquals("12345678",   creditCard.getNumber());
+    assertEquals("10/14",      creditCard.getExpiryDate());
     assertEquals((Object) 566, creditCard.getControlNumber());
-    assertEquals("Visa", creditCard.getType());
+    assertEquals("Visa",       creditCard.getType());
   }
+  
 }

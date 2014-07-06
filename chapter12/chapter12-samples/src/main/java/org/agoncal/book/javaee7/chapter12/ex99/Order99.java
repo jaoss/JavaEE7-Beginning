@@ -24,16 +24,21 @@ public class Order99 {
 
   @XmlAttribute
   private Long id;
+  
   @XmlAttribute(name = "date")
   @XmlJavaTypeAdapter(DateAdapter99.class)
   private Date creationDate;
+  
   @XmlTransient
   private Double totalAmount;
+  
   @XmlElementWrapper(name = "content")
   @XmlElement(name = "order_line", required = true)
   private List<OrderLine99> orderLines;
+  
   @XmlElement(required = true)
   private Customer99 customer;
+  
   @XmlElement(name = "credit_card")
   private CreditCard99 creditCard;
 
@@ -46,7 +51,7 @@ public class Order99 {
 
   public Order99(Long id, Double totalAmount, Date creationDate) {
     this.id = id;
-    this.totalAmount = totalAmount;
+    this.totalAmount  = totalAmount;
     this.creationDate = creationDate;
   }
 
@@ -55,8 +60,9 @@ public class Order99 {
   // ======================================
 
   public void addOrderLine(OrderLine99 orderLine) {
-    if (orderLines == null)
+    if (orderLines == null) {
       orderLines = new ArrayList<>();
+    }  
     orderLines.add(orderLine);
   }
 
@@ -111,4 +117,5 @@ public class Order99 {
   public void setCreditCard(CreditCard99 creditCard) {
     this.creditCard = creditCard;
   }
+  
 }

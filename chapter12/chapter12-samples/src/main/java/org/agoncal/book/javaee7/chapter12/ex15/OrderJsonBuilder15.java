@@ -12,12 +12,15 @@ import javax.json.JsonObject;
  */
 
 public class OrderJsonBuilder15 {
+  
   public static void main(String[] args) {
     System.out.println(new OrderJsonBuilder15().buildPurchaseOrder());
   }
 
   public JsonObject buildPurchaseOrder() {
-    return Json.createObjectBuilder().add("order", Json.createObjectBuilder()
+    return Json.createObjectBuilder()
+      .add("order", 
+        Json.createObjectBuilder()
             .add("@id", "1234")
             .add("@date", "05/06/2013")
             .add("customer", Json.createObjectBuilder()
@@ -39,6 +42,7 @@ public class OrderJsonBuilder15 {
                     .add("@number", "1357")
                     .add("@expiry_date", "10/13")
                     .add("@control_number", "234")
-                    .add("@type", "Visa"))).build();
+                    .add("@type", "Visa")))
+      .build();
   }
 }
