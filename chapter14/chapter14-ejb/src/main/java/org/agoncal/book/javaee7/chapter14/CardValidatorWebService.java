@@ -15,6 +15,6 @@ import java.lang.annotation.Target;
  */
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.FIELD, ElementType.TYPE, ElementType.METHOD})
+@Target({ElementType.FIELD, ElementType.TYPE, ElementType.PARAMETER, ElementType.METHOD})
 public @interface CardValidatorWebService {
 }

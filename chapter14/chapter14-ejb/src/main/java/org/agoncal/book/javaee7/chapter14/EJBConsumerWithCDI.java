@@ -13,7 +13,8 @@ import javax.inject.Inject;
 @Stateless
 public class EJBConsumerWithCDI {
 
-  @Inject @CardValidatorWebService
+  @Inject 
+  @CardValidatorWebService
   private CardValidatorService cardValidatorService;
 
   public boolean validate(CreditCard creditCard) {

@@ -12,7 +12,8 @@ import javax.xml.ws.WebServiceRef;
  */
 public class WebServiceProducer {
 
-  @Produces @CardValidatorWebService
+  @Produces 
+  @CardValidatorWebService
   @WebServiceRef
   private CardValidatorService cardValidatorService;
 

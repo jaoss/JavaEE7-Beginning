@@ -19,8 +19,7 @@
     <dependency>
       <groupId>org.glassfish.main.extras</groupId>
       <artifactId>glassfish-embedded-all</artifactId>
-    </dependency>
-
+    </dependency>    
   </dependencies>
 
   <build>
@@ -50,7 +49,7 @@
               <!--Or by wsdl files (these files are located under the wsdl directory)-->
 
               <wsdlUrls>
-                <wsdlUrl>http://localhost:8080/chapter14-service-1.0/CardValidatorService?wsdl</wsdlUrl>
+                <wsdlUrl>http://localhost:8080/chapter14-service/CardValidatorService?wsdl</wsdlUrl>
               </wsdlUrls>
 
               <!--<wsdlFiles>-->
