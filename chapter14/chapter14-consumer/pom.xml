@@ -7,7 +7,7 @@
   <artifactId>chapter14-consumer</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
-  <name>14 - JAX-WS (Consumer)</name>
+  <name>Ch14-JAX-WS(Consumer)</name>
 
   <parent>
     <groupId>org.agoncal.book.javaee7</groupId>
