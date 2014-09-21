@@ -26,7 +26,7 @@ public class SaxParsingWithValidation04 extends DefaultHandler {
 
   private String elementName = "";
   private int nbTabs;
-  private StringBuffer buffer = new StringBuffer();
+  private final StringBuffer buffer = new StringBuffer();
 
   public void parseOrderXML() throws SAXException, IOException, ParserConfigurationException {
 
@@ -42,6 +42,7 @@ public class SaxParsingWithValidation04 extends DefaultHandler {
     saxParser.parse(xmlDocument, this);
   }
 
+  @Override
   public void startElement(String namespaceURI, String localName, String qualifiedName, Attributes attrs) throws SAXException {
 
     if (localName != null && !localName.isEmpty())
@@ -58,6 +59,7 @@ public class SaxParsingWithValidation04 extends DefaultHandler {
     }
   }
 
+  @Override
   public void endElement(String namespaceURI, String localName, String qualifiedName) throws SAXException {
     nbTabs--;
     buffer.append(tabs() + "}\n");

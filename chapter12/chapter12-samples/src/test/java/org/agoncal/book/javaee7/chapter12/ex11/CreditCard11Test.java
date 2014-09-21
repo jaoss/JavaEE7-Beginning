@@ -30,7 +30,11 @@ public class CreditCard11Test {
   // ======================================
 
   private static Date creationDate;
-  public static final String creditCardXML = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><creditCard11 number=\"12345678\"><expiry-date>10/14</expiry-date><type>Visa</type><control-number>566</control-number></creditCard11>";
+  public static final String creditCardXML = 
+          "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
+          + "<creditCard11 number=\"12345678\">"
+          +   "<expiry-date>10/14</expiry-date><type>Visa</type><control-number>566</control-number>"
+          + "</creditCard11>";
 
   // ======================================
   // =          Lifecycle Methods         =

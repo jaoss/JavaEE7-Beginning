@@ -1,6 +1,5 @@
 package org.agoncal.book.javaee7.chapter12.ex17;
 
-import org.agoncal.book.javaee7.chapter12.ex15.OrderJsonBuilder15;
 import org.junit.Test;
 
 import java.io.IOException;

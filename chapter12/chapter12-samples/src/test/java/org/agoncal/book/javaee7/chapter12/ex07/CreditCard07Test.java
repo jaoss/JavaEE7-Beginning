@@ -17,25 +17,27 @@ import java.util.Date;
 import static org.junit.Assert.assertEquals;
 
 /**
- * @author Antonio Goncalves
- *         APress Book - Beginning Java EE 7 with Glassfish 4
- *         http://www.apress.com/
- *         http://www.antoniogoncalves.org
- *         --
+ * @author Antonio Goncalves APress Book - Beginning Java EE 7 with Glassfish 4
+ * http://www.apress.com/ http://www.antoniogoncalves.org --
  */
 public class CreditCard07Test {
 
   // ======================================
   // =             Attributes             =
   // ======================================
-
   private static Date creationDate;
-  public static final String creditCardXML = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><creditCard07><controlNumber>566</controlNumber><expiryDate>10/14</expiryDate><number>12345678</number><type>Visa</type></creditCard07>";
+  public static final String creditCardXML = 
+          "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
+          + "<creditCard07>"
+          +   "<controlNumber>566</controlNumber>"
+          +   "<expiryDate>10/14</expiryDate>"
+          +   "<number>12345678</number>"
+          +   "<type>Visa</type>"
+          + "</creditCard07>";
 
   // ======================================
   // =          Lifecycle Methods         =
   // ======================================
-
   @BeforeClass
   public static void init() throws IOException {
     Calendar calendar = Calendar.getInstance();
@@ -50,7 +52,6 @@ public class CreditCard07Test {
   // ======================================
   // =              Unit tests            =
   // ======================================
-
   @Test
   public void shouldMarshallACreditCard() throws JAXBException {
 

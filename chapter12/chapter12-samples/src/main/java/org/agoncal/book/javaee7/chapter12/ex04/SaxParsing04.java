@@ -22,7 +22,7 @@ import java.util.List;
  */
 public class SaxParsing04 extends DefaultHandler {
 
-  private List<OrderLine04> orderLines = new ArrayList<>();
+  private final List<OrderLine04> orderLines = new ArrayList<>();
   private OrderLine04 orderLine;
   private Boolean dealingWithUnitPrice = false;
   private StringBuffer unitPriceBuffer;
