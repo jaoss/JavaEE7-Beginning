@@ -7,7 +7,7 @@
   <artifactId>chapter14-ejb</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
-  <name>14 - JAX-WS(EJB)</name>
+  <name>14 - JAX-WS (EJB)</name>
 
   <parent>
     <groupId>org.agoncal.book.javaee7</groupId>
@@ -43,13 +43,13 @@
               <!--Or by wsdl files (these files are located under the wsdl directory)-->
 
               <!--<wsdlUrls>-->
-              <!--<wsdlUrl>http://localhost:8080/chapter14-service-1.0//CardValidatorService?wsdl-->
+              <!--<wsdlUrl>http://localhost:8080/chapter14-service//CardValidatorService?wsdl-->
               <!--</wsdlUrl>-->
 
               <wsdlFiles>
                 <wsdlFile>CardValidatorService.wsdl</wsdlFile>
               </wsdlFiles>
-              <keep>true</keep>
+              <!--<keep>true</keep>-->
 
             </configuration>
           </execution>
