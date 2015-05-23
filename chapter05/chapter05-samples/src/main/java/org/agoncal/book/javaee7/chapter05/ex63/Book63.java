@@ -20,9 +20,6 @@ public class Book63 extends Item63 {
   // =             Attributes             =
   // ======================================
 
-  @Id
-  @GeneratedValue
-  protected Long id;
   private String isbn;
   private String publisher;
   private Integer nbOfPage;

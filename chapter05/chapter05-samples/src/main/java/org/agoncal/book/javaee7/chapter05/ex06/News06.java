@@ -1,6 +1,8 @@
 package org.agoncal.book.javaee7.chapter05.ex06;
 
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
@@ -16,7 +18,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "ex06_news")
 @IdClass(NewsId06.class)
-public class News06 {
+public class News06 implements Serializable {
 
   // ======================================
   // =             Attributes             =

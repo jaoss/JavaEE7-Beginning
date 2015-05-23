@@ -26,9 +26,11 @@ public class EntityManagerProducer {
     return em;
   }
 
+  @SuppressWarnings("unused")
   private void closeEntityManager(@Disposes EntityManager entityManager) {
     if (entityManager.isOpen()) {
       entityManager.close();
     }
   }
+  
 }

@@ -1,5 +1,7 @@
 package org.agoncal.book.javaee7.chapter05.ex06;
 
+import java.io.Serializable;
+
 /**
  * @author Antonio Goncalves
  *         APress Book - Beginning Java EE 7 with Glassfish 4
@@ -7,7 +9,7 @@ package org.agoncal.book.javaee7.chapter05.ex06;
  *         http://www.antoniogoncalves.org
  *         --
  */
-public class NewsId06 {
+public class NewsId06 implements Serializable {
 
   // ======================================
   // =             Attributes             =

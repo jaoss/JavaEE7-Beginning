@@ -1,5 +1,9 @@
 package org.agoncal.book.javaee7.chapter05.ex63;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * @author Antonio Goncalves
  *         APress Book - Beginning Java EE 7 with Glassfish 4
@@ -7,15 +11,19 @@ package org.agoncal.book.javaee7.chapter05.ex63;
  *         http://www.antoniogoncalves.org
  *         --
  */
+@Entity
 public class Item63 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
 
-  protected String title;
-  protected Float price;
-  protected String description;
+    @Id
+    @GeneratedValue
+    protected Long id;
+    protected String title;
+    protected Float price;
+    protected String description;
 
   // ======================================
   // =            Constructors            =

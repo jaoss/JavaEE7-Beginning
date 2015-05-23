@@ -1,5 +1,7 @@
 package org.agoncal.book.javaee7.chapter05.ex04;
 
+import java.io.Serializable;
+
 import javax.persistence.Embeddable;
 
 /**
@@ -10,7 +12,7 @@ import javax.persistence.Embeddable;
  *         --
  */
 @Embeddable
-public class NewsId04 {
+public class NewsId04 implements Serializable {
 
   // ======================================
   // =             Attributes             =
