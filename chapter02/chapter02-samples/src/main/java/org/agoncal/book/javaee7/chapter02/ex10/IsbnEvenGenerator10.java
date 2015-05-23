@@ -17,6 +17,7 @@ public class IsbnEvenGenerator10 implements NumberGenerator10 {
   // =          Business methods          =
   // ======================================
 
+  @Override
   public String generateNumber() {
     return "132-84356-" + Math.abs(new Random().nextInt());
   }

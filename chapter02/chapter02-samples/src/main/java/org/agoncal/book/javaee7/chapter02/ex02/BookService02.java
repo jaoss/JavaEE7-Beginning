@@ -13,7 +13,7 @@ public class BookService02 {
   // =             Attributes             =
   // ======================================
 
-  private NumberGenerator02 numberGenerator;
+  private final NumberGenerator02 numberGenerator;
 
   // ======================================
   // =            Constructors            =

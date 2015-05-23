@@ -28,4 +28,5 @@ public class BookOddService10 {
     book.setIsbn(numberGenerator.generateNumber());
     return book;
   }
+  
 }

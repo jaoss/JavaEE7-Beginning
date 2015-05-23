@@ -51,4 +51,5 @@ public class NumberGenerator14IT {
     Book14 book = bookService.createBook("H2G2", 12.5f, "Geeky scifi Book");
     assertTrue(book.getIsbn().startsWith("MOCK"));
   }
+  
 }
