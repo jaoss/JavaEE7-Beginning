@@ -20,7 +20,6 @@ public class BookService16 {
 
   @Inject
   @ThirteenDigits16
-
   private NumberGenerator16 numberGenerator;
 
   // ======================================
@@ -33,4 +32,5 @@ public class BookService16 {
     book.setIsbn(numberGenerator.generateNumber());
     return book;
   }
+  
 }

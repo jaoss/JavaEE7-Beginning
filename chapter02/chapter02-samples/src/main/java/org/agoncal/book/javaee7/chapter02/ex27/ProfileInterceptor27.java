@@ -1,5 +1,6 @@
 package org.agoncal.book.javaee7.chapter02.ex27;
 
+import java.util.logging.Level;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;
@@ -30,11 +31,11 @@ public class ProfileInterceptor27 {
   @PostConstruct
   public void logMethod(InvocationContext ic) throws Exception {
     logger.fine(ic.getTarget().toString());
-    logger.severe(">>>" + ic.getTarget().toString());
+    logger.log(Level.SEVERE, ">>>{0}", ic.getTarget().toString());
     try {
       ic.proceed();
     } finally {
-      logger.severe("<<<" + ic.getTarget().toString());
+      logger.log(Level.SEVERE, "<<<{0}", ic.getTarget().toString());
       logger.fine(ic.getTarget().toString());
     }
   }
@@ -50,8 +51,9 @@ public class ProfileInterceptor27 {
       return ic.proceed();
     } finally {
       long diffTime = System.currentTimeMillis() - initTime;
-      logger.severe("###" + ic.getMethod() + " took " + diffTime + " millis");
-      logger.fine(ic.getMethod() + " took " + diffTime + " millis");
+      logger.log(Level.SEVERE, "###{0} took {1} millis", new Object[]{ic.getMethod(), diffTime});
+      logger.log(Level.FINE, "{0} took {1} millis", new Object[]{ic.getMethod(), diffTime});
     }
   }
+  
 }

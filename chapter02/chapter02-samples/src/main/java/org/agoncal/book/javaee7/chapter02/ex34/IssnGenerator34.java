@@ -19,4 +19,5 @@ public class IssnGenerator34 implements NumberGenerator34 {
   public String generateNumber() {
     return "8-" + Math.abs(new Random().nextInt());
   }
+  
 }

@@ -28,7 +28,9 @@ public class IssnGenerator16 implements NumberGenerator16 {
   // =          Business methods          =
   // ======================================
 
+  @Override
   public String generateNumber() {
     return prefix + postfix;
   }
+  
 }

@@ -47,4 +47,5 @@ public class CustomerService31IT {
     customerService.createCustomer(new Customer33());
     customerService.findCustomerById(1L);
   }
+  
 }

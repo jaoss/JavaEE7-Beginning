@@ -48,4 +48,5 @@ public class CustomerService27IT {
     CustomerService27 customerService = container.instance().select(CustomerService27.class).get();
     customerService.createCustomer(new Customer27());
   }
+  
 }

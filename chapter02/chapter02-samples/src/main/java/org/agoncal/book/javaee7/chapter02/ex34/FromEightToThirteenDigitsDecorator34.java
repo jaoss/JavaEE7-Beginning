@@ -32,4 +32,5 @@ public class FromEightToThirteenDigitsDecorator34 implements NumberGenerator34 {
     String isbn = "13-84356" + issn.substring(1);
     return isbn;
   }
+  
 }

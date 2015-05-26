@@ -50,4 +50,5 @@ public class NumberGenerator34IT {
     System.out.println("### " + book.getIsbn());
     assertTrue(book.getIsbn().startsWith("13"));
   }
+  
 }

@@ -29,4 +29,5 @@ public class DerbyPingService19 {
   public void ping() throws SQLException {
     conn.createStatement().executeQuery("SELECT 1 FROM SYSIBM.SYSDUMMY1");
   }
+  
 }

@@ -21,7 +21,6 @@ public class JDBCConnectionProducer19 {
     try {
       Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
       conn = DriverManager.getConnection("jdbc:derby:memory:chapter02DB;create=true", "APP", "APP");
-
     } 
     catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
       e.printStackTrace();

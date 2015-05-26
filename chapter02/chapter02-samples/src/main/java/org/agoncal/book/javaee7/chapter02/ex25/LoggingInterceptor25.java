@@ -1,5 +1,6 @@
 package org.agoncal.book.javaee7.chapter02.ex25;
 
+import java.util.logging.Level;
 import javax.inject.Inject;
 import javax.interceptor.AroundConstruct;
 import javax.interceptor.AroundInvoke;
@@ -41,13 +42,14 @@ public class LoggingInterceptor25 {
   @AroundInvoke
   public Object logMethod(InvocationContext ic) throws Exception {
     logger.entering(ic.getTarget().toString(), ic.getMethod().getName());
-    logger.severe(">>>" + ic.getTarget().toString() + " - " + ic.getMethod().getName());
+    logger.log(Level.SEVERE, ">>>{0} - {1}", new Object[]{ic.getTarget().toString(), ic.getMethod().getName()});
     try {
       return ic.proceed();
     } 
     finally {
-      logger.severe("<<<" + ic.getTarget().toString() + " - " + ic.getMethod().getName());
+      logger.log(Level.SEVERE, "<<<{0} - {1}", new Object[]{ic.getTarget().toString(), ic.getMethod().getName()});
       logger.exiting(ic.getTarget().toString(), ic.getMethod().getName());
     }
   }
+  
 }

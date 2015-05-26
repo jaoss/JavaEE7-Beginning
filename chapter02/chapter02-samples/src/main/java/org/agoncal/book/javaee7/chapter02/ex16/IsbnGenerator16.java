@@ -19,7 +19,7 @@ public class IsbnGenerator16 implements NumberGenerator16 {
   // ======================================
 
   @Inject
-  Logger log;
+  private Logger log;
 
   @Inject
   @ThirteenDigits16
@@ -37,6 +37,7 @@ public class IsbnGenerator16 implements NumberGenerator16 {
   // =          Business methods          =
   // ======================================
 
+  @Override
   public String generateNumber() {
     log.warning("Debug message with @Inject");
     return prefix + editorNumber + postfix;

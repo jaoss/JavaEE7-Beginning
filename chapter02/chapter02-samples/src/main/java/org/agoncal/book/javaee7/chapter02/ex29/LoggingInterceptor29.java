@@ -39,4 +39,5 @@ public class LoggingInterceptor29 {
       logger.exiting(ic.getTarget().toString(), ic.getMethod().getName());
     }
   }
+  
 }
