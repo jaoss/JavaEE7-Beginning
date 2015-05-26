@@ -52,4 +52,5 @@ public class NumberGenerator36IT {
     assertTrue(book.getIsbn().startsWith("8"));
     bookService.deleteBook(book);
   }
+  
 }

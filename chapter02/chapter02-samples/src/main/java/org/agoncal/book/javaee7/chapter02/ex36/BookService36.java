@@ -39,4 +39,5 @@ public class BookService36 {
   public void deleteBook(Book36 book) {
     bookRemovedEvent.fire(book);
   }
+  
 }

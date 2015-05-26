@@ -16,7 +16,9 @@ public class IssnGenerator36 implements NumberGenerator36 {
   // =          Business methods          =
   // ======================================
 
+  @Override
   public String generateNumber() {
     return "8-" + Math.abs(new Random().nextInt());
   }
+  
 }

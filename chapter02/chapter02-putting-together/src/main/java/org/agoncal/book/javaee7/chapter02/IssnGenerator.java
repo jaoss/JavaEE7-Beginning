@@ -26,6 +26,7 @@ public class IssnGenerator implements NumberGenerator {
   // ======================================
 
   @Loggable
+  @Override
   public String generateNumber() {
     String issn =  "8-" + Math.abs(new Random().nextInt());
     logger.info("Generated ISBN : " + issn);

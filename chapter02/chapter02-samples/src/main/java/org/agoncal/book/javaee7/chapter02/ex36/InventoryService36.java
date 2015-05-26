@@ -36,4 +36,5 @@ public class InventoryService36 {
     logger.warning("#### Removing book " + book.getTitle() + " to inventory");
     inventory.remove(book);
   }
+  
 }
