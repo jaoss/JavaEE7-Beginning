@@ -34,8 +34,9 @@ public class InventoryEJB03 {
     item.decreaseAvailableStock();
     sendShippingMessage();
 
-    if (inventoryLevel(item) == 0)
+    if (inventoryLevel(item) == 0) {
       ctx.setRollbackOnly();
+    }
   }
 
   private void sendShippingMessage() {
@@ -45,4 +46,5 @@ public class InventoryEJB03 {
   private int inventoryLevel(Item03 item) {
     return 0;
   }
+  
 }

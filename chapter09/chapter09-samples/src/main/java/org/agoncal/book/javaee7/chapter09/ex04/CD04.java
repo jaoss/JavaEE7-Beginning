@@ -1,5 +1,6 @@
 package org.agoncal.book.javaee7.chapter09.ex04;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.NamedQuery;
@@ -16,7 +17,7 @@ import static org.agoncal.book.javaee7.chapter09.ex04.CD04.*;
  */
 @Entity
 @NamedQuery(name = FIND_ALL, query = "SELECT c FROM CD04 c")
-public class CD04 extends Item04 {
+public class CD04 extends Item04 implements Serializable {
 
   // ======================================
   // =             Constants              =
@@ -91,4 +92,5 @@ public class CD04 extends Item04 {
   public void setGenre(String genre) {
     this.genre = genre;
   }
+  
 }

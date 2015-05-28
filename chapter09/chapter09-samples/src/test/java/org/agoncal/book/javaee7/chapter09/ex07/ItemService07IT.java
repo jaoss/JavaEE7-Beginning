@@ -66,7 +66,8 @@ public class ItemService07IT {
     book.setIllustrations(false);
 
     // Looks up the EJB
-    ItemService07 itemService = (ItemService07) ctx.lookup("java:global/classes/ItemService07!org.agoncal.book.javaee7.chapter09.ex07.ItemService07");
+    ItemService07 itemService =
+            (ItemService07)ctx.lookup("java:global/classes/ItemService07!org.agoncal.book.javaee7.chapter09.ex07.ItemService07");
 
     // Persists the book to the database
     book = itemService.createBook(book);
@@ -93,7 +94,8 @@ public class ItemService07IT {
     cd.setGenre("Rock");
 
     // Looks up the Service
-    ItemService07 itemService = (ItemService07) ctx.lookup("java:global/classes/ItemService07!org.agoncal.book.javaee7.chapter09.ex07.ItemService07");
+    ItemService07 itemService =
+            (ItemService07)ctx.lookup("java:global/classes/ItemService07!org.agoncal.book.javaee7.chapter09.ex07.ItemService07");
 
     // Persists the book to the database
     cd = itemService.createCD(cd);
@@ -105,4 +107,5 @@ public class ItemService07IT {
     List<CD07> cds = itemService.findCDs();
     assertNotNull(cds);
   }
+  
 }

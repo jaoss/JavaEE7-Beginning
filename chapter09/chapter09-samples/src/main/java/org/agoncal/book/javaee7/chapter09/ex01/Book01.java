@@ -73,4 +73,5 @@ public class Book01 extends Item01 {
   public void setIllustrations(Boolean illustrations) {
     this.illustrations = illustrations;
   }
+  
 }

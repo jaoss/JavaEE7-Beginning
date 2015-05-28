@@ -91,4 +91,5 @@ public class CD01 extends Item01 {
   public void setGenre(String genre) {
     this.genre = genre;
   }
+  
 }

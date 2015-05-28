@@ -23,6 +23,7 @@ public class ItemEJB04 {
 
   @PersistenceContext(unitName = "chapter09PU")
   private EntityManager em;
+  
   @EJB
   private InventoryEJB04 inventory;
 
@@ -75,4 +76,5 @@ public class ItemEJB04 {
   public CD04 updateCD(CD04 cd) {
     return em.merge(cd);
   }
+  
 }

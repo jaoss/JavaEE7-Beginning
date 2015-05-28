@@ -42,11 +42,11 @@ public class InventoryEJB06 {
       item.decreaseAvailableStock();
       sendShippingMessage();
 
-      if (inventoryLevel(item) == 0)
+      if (inventoryLevel(item) == 0) {
         ut.rollback();
-      else
+      } else {
         ut.commit();
-
+      }
     } catch (Exception e) {
       try {
         ut.rollback();
@@ -63,4 +63,5 @@ public class InventoryEJB06 {
   private int inventoryLevel(Item06 item) {
     return 0;
   }
+  
 }

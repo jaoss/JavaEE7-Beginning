@@ -29,8 +29,9 @@ public class InventoryEJB04 {
     item.decreaseAvailableStock();
     sendShippingMessage();
 
-    if (inventoryLevel(item) == 0)
+    if (inventoryLevel(item) == 0) {
       throw new InventoryLevelTooLowException04();
+    }  
   }
 
   private void sendShippingMessage() {
@@ -40,4 +41,5 @@ public class InventoryEJB04 {
   private int inventoryLevel(Item04 item) {
     return 0;
   }
+  
 }

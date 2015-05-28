@@ -60,5 +60,7 @@ public class BookEJBIT {
       // Finds all the books and makes sure there is one less
       assertEquals(2, bookEJB.findBooks().size());
     }
+    
   }
+  
 }

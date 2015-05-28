@@ -1,5 +1,6 @@
 package org.agoncal.book.javaee7.chapter09.ex06;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.NamedQuery;
 
@@ -14,7 +15,7 @@ import static org.agoncal.book.javaee7.chapter09.ex06.Book06.*;
  */
 @Entity
 @NamedQuery(name = FIND_ALL, query = "SELECT b FROM Book06 b")
-public class Book06 extends Item06 {
+public class Book06 extends Item06 implements Serializable {
 
   // ======================================
   // =             Constants              =
@@ -73,4 +74,5 @@ public class Book06 extends Item06 {
   public void setIllustrations(Boolean illustrations) {
     this.illustrations = illustrations;
   }
+  
 }

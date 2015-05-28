@@ -22,7 +22,7 @@ public class Main {
 
     // Looks up the EJB
     Context ctx = new InitialContext();
-    BookEJBRemote bookEJB = (BookEJBRemote) ctx.lookup("java:global/chapter08-service-1.0/BookEJB!org.agoncal.book.javaee7.chapter08.BookEJBRemote");
+    BookEJBRemote bookEJB = (BookEJBRemote)ctx.lookup("java:global/chapter08-service-1.0/BookEJB!org.agoncal.book.javaee7.chapter08.BookEJBRemote");
 
     // Gets and displays all the books from the database
     List<Book> books = bookEJB.findBooks();
@@ -43,4 +43,5 @@ public class Main {
     bookEJB.deleteBook(book);
     System.out.println("### Book deleted");
   }
+  
 }

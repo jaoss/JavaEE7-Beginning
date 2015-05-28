@@ -84,14 +84,17 @@ public class Item04 {
   }
 
   public void decreaseAvailableStock() {
-    if (availableInStock == null)
+    if (availableInStock == null) {
       availableInStock = 0;
+    }
     availableInStock--;
   }
 
   public void increaseAvailableStock() {
-    if (availableInStock == null)
+    if (availableInStock == null) {
       availableInStock = 0;
+    }
     availableInStock++;
   }
+  
 }

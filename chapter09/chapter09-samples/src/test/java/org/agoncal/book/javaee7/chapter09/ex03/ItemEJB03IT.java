@@ -70,7 +70,8 @@ public class ItemEJB03IT {
 
     // Persists the book to the database
     book = itemEJB.createBook(book);
-    assertNull("Book should not be found because the create has been rollbacked (setRollbackOnly in InventoryEJB)", itemEJB.findBookById(book.getId()));
+    assertNull("Book should not be found because the create has been rollbacked (setRollbackOnly in InventoryEJB)", 
+            itemEJB.findBookById(book.getId()));
 
     // Retrieves all the books from the database
     List<Book03> books = itemEJB.findBooks();
@@ -95,10 +96,12 @@ public class ItemEJB03IT {
 
     // Persists the book to the database
     cd = itemEJB.createCD(cd);
-    assertNull("CD should not be found because the create has been rollbacked (setRollbackOnly in InventoryEJB)", itemEJB.findBookById(cd.getId()));
+    assertNull("CD should not be found because the create has been rollbacked (setRollbackOnly in InventoryEJB)", 
+            itemEJB.findBookById(cd.getId()));
 
     // Retrieves all the books from the database
     List<CD03> cds = itemEJB.findCDs();
     assertNotNull(cds);
   }
+  
 }

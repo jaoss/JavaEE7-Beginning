@@ -34,4 +34,5 @@ public class InventoryEJB01 {
   private void sendShippingMessage() {
     // Send a message
   }
+  
 }

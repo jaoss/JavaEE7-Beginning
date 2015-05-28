@@ -34,4 +34,5 @@ public class InventoryService07 {
   private void sendShippingMessage() {
     // Send a message
   }
+  
 }

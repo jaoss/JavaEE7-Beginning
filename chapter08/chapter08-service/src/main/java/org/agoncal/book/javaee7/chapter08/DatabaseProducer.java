@@ -21,4 +21,5 @@ public class DatabaseProducer {
   @Produces
   @PersistenceContext(unitName = "chapter08PU")
   private EntityManager em;
+  
 }

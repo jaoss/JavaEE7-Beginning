@@ -55,4 +55,5 @@ public class DatabasePopulator {
     bookEJB.deleteBook(javaee7);
     bookEJB.deleteBook(lord);
   }
+  
 }

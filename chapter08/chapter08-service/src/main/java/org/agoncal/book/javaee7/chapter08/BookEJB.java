@@ -32,6 +32,7 @@ public class BookEJB implements BookEJBRemote {
   // =           Public Methods           =
   // ======================================
 
+  @Override
   public List<Book> findBooks() {
     TypedQuery<Book> query = em.createNamedQuery(FIND_ALL, Book.class);
     return query.getResultList();
@@ -39,6 +40,7 @@ public class BookEJB implements BookEJBRemote {
 
   public
   @NotNull
+  @Override
   Book createBook(@NotNull Book book) {
     em.persist(book);
     return book;
@@ -46,11 +48,14 @@ public class BookEJB implements BookEJBRemote {
 
   public
   @NotNull
+  @Override
   Book updateBook(@NotNull Book book) {
     return em.merge(book);
   }
 
+  @Override
   public void deleteBook(@NotNull Book book) {
     em.remove(em.merge(book));
   }
+  
 }

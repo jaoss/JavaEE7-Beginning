@@ -18,4 +18,5 @@ public class InventoryLevelTooLowException04 extends Exception {
   public InventoryLevelTooLowException04(String message) {
     super(message);
   }
+  
 }
