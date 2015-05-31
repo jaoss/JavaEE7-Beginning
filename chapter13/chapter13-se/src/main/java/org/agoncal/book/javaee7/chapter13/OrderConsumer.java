@@ -36,6 +36,9 @@ public class OrderConsumer {
         OrderDTO order = jmsContext.createConsumer(topic).receiveBody(OrderDTO.class);
         System.out.println("Order received: " + order);
       }
+      
     }
+    
   }
+  
 }

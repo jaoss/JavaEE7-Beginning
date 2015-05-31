@@ -23,6 +23,7 @@ public class Producer06 {
   @Inject
   @JMSConnectionFactory("jms/javaee7/ConnectionFactory")
   private JMSContext context;
+  
   @Resource(lookup = "jms/javaee7/Queue")
   private Queue queue;
 
@@ -31,8 +32,8 @@ public class Producer06 {
   // ======================================
 
   public void sendMessage() {
-
     // Sends a text message to the queue
     context.createProducer().send(queue, "JMS 2.0 - This is a text message sent at " + new Date());
   }
+  
 }

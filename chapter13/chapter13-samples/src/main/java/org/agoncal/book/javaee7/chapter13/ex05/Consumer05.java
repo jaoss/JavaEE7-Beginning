@@ -20,6 +20,7 @@ public class Consumer05 {
 
   @Resource(lookup = "jms/javaee7/ConnectionFactory")
   private static ConnectionFactory connectionFactory;
+  
   @Resource(lookup = "jms/javaee7/Queue")
   private static Queue queue;
 
@@ -38,4 +39,5 @@ public class Consumer05 {
       }
     }
   }
+  
 }

@@ -44,5 +44,7 @@ public class Consumer02 {
     } catch (NamingException | JMSException e) {
       e.printStackTrace();
     }
+    
   }
+  
 }

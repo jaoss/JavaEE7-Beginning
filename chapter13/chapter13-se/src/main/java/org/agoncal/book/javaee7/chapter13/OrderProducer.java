@@ -22,6 +22,11 @@ public class OrderProducer {
   // ======================================
 
   public static void main(String[] args) throws NamingException {
+      
+    String[] args1 = new String[1];
+    args1[0] = "1";
+    
+    args = args1;
 
     if (args.length != 1) {
       System.out.println("usage : enter an amount");
@@ -46,5 +51,7 @@ public class OrderProducer {
       jmsContext.createProducer().setProperty("orderAmount", totalAmount).send(topic, order);
       System.out.println("\nOrder sent : " + order.toString());
     }
+    
   }
+  
 }

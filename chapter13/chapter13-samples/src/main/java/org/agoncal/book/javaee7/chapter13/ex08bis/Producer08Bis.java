@@ -21,8 +21,10 @@ public class Producer08Bis {
   @JMSConnectionFactory("jms/javaee7/ConnectionFactory")
   @JMSSessionMode(JMSContext.AUTO_ACKNOWLEDGE)
   private JMSContext context;
+  
   @Resource(lookup = "jms/javaee7/Queue")
   private Queue queue;
+  
   @Resource(lookup = "jms/javaee7/Topic")
   private Topic topic;
 
@@ -58,4 +60,5 @@ public class Producer08Bis {
     context.createProducer().setPriority(2).setTimeToLive(1000).setDeliveryMode(DeliveryMode.NON_PERSISTENT).send(queue, message);
 
   }
+  
 }

@@ -21,6 +21,7 @@ public class Consumer08Bis {
 
   @Resource(lookup = "jms/javaee7/ConnectionFactory")
   private static ConnectionFactory connectionFactory;
+  
   @Resource(lookup = "jms/javaee7/Queue")
   private static Queue queue;
 
@@ -31,7 +32,6 @@ public class Consumer08Bis {
   public static void main(String[] args) {
 
     try (JMSContext context = connectionFactory.createContext()) {
-
       // Filtering messages
       Message message = context.createConsumer(queue, "JMSPriority < 6").receive();
       message = context.createConsumer(queue, "JMSPriority < 6 AND orderAmount < 200").receive();

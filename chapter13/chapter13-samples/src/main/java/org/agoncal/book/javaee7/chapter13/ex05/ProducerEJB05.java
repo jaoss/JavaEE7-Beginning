@@ -23,6 +23,7 @@ public class ProducerEJB05 {
 
   @Resource(lookup = "jms/javaee7/ConnectionFactory")
   private ConnectionFactory connectionFactory;
+  
   @Resource(lookup = "jms/javaee7/Queue")
   private Queue queue;
 
@@ -38,4 +39,5 @@ public class ProducerEJB05 {
       System.out.println("\nMessage sent !");
     }
   }
+  
 }
