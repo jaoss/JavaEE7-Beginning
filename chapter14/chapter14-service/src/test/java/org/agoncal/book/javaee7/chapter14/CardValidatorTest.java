@@ -25,4 +25,5 @@ public class CardValidatorTest {
     creditCard.setNumber("12341233");
     assertFalse("Credit card should not be valid", cardValidator.validate(creditCard));
   }
+  
 }

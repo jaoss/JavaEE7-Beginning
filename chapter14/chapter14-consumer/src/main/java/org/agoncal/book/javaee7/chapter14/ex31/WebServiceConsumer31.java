@@ -34,4 +34,5 @@ public class WebServiceConsumer31 {
     creditCard.setNumber("12341233");
     System.out.println(cardValidator.validate(creditCard));
   }
+  
 }

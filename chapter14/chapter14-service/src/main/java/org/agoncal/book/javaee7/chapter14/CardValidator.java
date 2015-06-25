@@ -16,14 +16,12 @@ public class CardValidator implements Validator {
   // =           Public Methods           =
   // ======================================
 
+  @Override
   public boolean validate(CreditCard creditCard) {
 
     Character lastDigit = creditCard.getNumber().charAt(creditCard.getNumber().length() - 1);
 
-    if (Integer.parseInt(lastDigit.toString()) % 2 == 0) {
-      return true;
-    } else {
-      return false;
-    }
+    return (Integer.parseInt(lastDigit.toString()) % 2 == 0);
   }
+  
 }

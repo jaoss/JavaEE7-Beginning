@@ -50,4 +50,5 @@ public class CardValidatorIT {
     endpoint.stop();
     assertFalse(endpoint.isPublished());
   }
+  
 }

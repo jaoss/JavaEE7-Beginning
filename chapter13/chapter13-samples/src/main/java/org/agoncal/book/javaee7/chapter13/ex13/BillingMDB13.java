@@ -24,6 +24,7 @@ public class BillingMDB13 implements MessageListener {
   @JMSConnectionFactory("jms/javaee7/ConnectionFactory")
   @JMSSessionMode(JMSContext.AUTO_ACKNOWLEDGE)
   private JMSContext context;
+  
   @Resource(lookup = "jms/javaee7/Queue")
   private Destination printingQueue;
 
@@ -31,6 +32,7 @@ public class BillingMDB13 implements MessageListener {
   // =           Public Methods           =
   // ======================================
 
+  @Override
   public void onMessage(Message message) {
     try {
       System.out.println("Message received: " + message.getBody(String.class));
@@ -43,4 +45,5 @@ public class BillingMDB13 implements MessageListener {
   private void sendPrintingMessage() throws JMSException {
     context.createProducer().send(printingQueue, "This message has been received and sent again at " + new Date());
   }
+  
 }

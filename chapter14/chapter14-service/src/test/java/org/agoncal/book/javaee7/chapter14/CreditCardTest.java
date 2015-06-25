@@ -77,4 +77,5 @@ public class CreditCardTest {
     assertEquals((Object) 566, creditCard.getControlNumber());
     assertEquals("Visa", creditCard.getType());
   }
+  
 }

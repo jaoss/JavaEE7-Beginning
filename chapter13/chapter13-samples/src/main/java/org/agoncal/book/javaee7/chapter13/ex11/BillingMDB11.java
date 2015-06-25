@@ -32,6 +32,7 @@ public class BillingMDB11 implements MessageListener {
   // =           Public Methods           =
   // ======================================
 
+  @Override
   public void onMessage(Message message) {
     try {
       System.out.println("Message received: " + message.getBody(String.class));
@@ -39,4 +40,5 @@ public class BillingMDB11 implements MessageListener {
       e.printStackTrace();
     }
   }
+  
 }
